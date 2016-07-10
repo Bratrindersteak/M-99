@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import "initialization.scss";
+
+// body {
+// 	max-width: 768px;
+// 	margin: 0 auto;
+// 	@extend %relative;
+// }
+
+$img-url: '../images/';
+
+%colorfff {
+	color: #fff;
+}
+
+%color333 {
+	color: #333;
+}
+
+%color999 {
+	color: #999;
+}
+
+%apple-default {
+	-webkit-appearance: none;
+}
+
+%btnClick {
+	-webkit-tap-highlight-color:transparent;
+}
+
+%box-sizing {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+// .alpha {
+// 	position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     z-index: 10;
+// }
+
+.image {
+	position: relative;
+	font-size: 0;
+}
+
+.image-alpha {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+@import "homePage.scss";
+@import "carDetail.scss";

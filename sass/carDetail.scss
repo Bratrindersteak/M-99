@@ -1,0 +1,406 @@
+.cd-over-banner {
+	@extend %relative;
+
+	.link {
+		bottom: 10px;
+		right: 8px;
+		@extend %absolute;
+
+		a {
+			color: #ffe400;
+			@extend %font-thirteen;
+		}
+	}
+}
+
+.cd-rush-logo {
+	position: absolute;
+	top: 0;
+	left: 18px;
+	width: 55px;
+	height: 47px;
+	border-top: 2px solid #ab0513;
+	@include normalGradient(linear, top, #d11235, #f51d3a);
+	@extend %text-align;
+
+	&:before {
+		content: '';
+		bottom: -17px;
+		left: -9px;
+		width: 0;
+		height: 0;
+		border-top: 19px solid #c4111c;
+		border-left: 37px solid transparent;
+		border-right: 37px solid transparent;
+		z-index: -1;
+		@extend %absolute;
+	}
+
+	&:after {
+		content: '';
+		bottom: -17px;
+		left: -5px;
+		width: 0;
+		height: 0;
+		border-top: 17px solid #f51d3b;
+		border-left: 33px solid transparent;
+		border-right: 33px solid transparent;
+		@extend %absolute;
+	}
+
+	span {
+		display: inline-block;
+		padding: 26px 2px 0 0;
+		background: url(../images/cd-rush-logo-59fc0be77e.png) no-repeat;
+		background-size: 42px 25px;
+		background-position: 4px 5px;
+		color: #fffc00;
+		@extend %font-sixteen;
+	}
+}
+
+.cd-rush-blocks {
+	.top-info {
+		padding: 15px 0 21px;
+		background-color: #ff6c63;
+		@extend %relative;
+		@extend %text-align;
+
+		&:before {
+			content: '';
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 0;
+			margin-left: -394px;
+			border-top: 30px solid transparent;
+			border-bottom: 7px solid #fd5142;
+			border-left: 394px solid #fd5142;
+			border-right: 394px solid #fd5142;
+			@extend %absolute;
+		}
+
+		&:after {
+			content: '';
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 0;
+			margin-left: -394px;
+			border-top: 40px solid transparent;
+			border-left: 394px solid #fff;
+			border-right: 394px solid #fff;
+			@extend %absolute;
+		}
+
+		.title {
+			width: 93%;
+			margin: 0 auto;
+			line-height: 21px;
+			@extend %font-sixteen;
+			@extend %colorfff;
+		}
+
+		.rush-price {
+			margin: 8px 0;
+			color: #fff600;
+		}
+
+		.rush-price-text {
+			vertical-align: 3px;
+			@extend %font-nineteen;
+		}
+
+		.rush-price-num {
+			@extend %font-twenty-five;
+		}
+
+		.original-price {
+			color: #ffdad8;
+			text-decoration: line-through;
+			@extend %font-twelve;
+		}
+	}
+
+	.new-car-price {
+		height: 40px;
+		line-height: 40px;
+		padding-left: 2%;
+		border-bottom: 1px solid #d7d7d7;
+		color: #737373;
+		@extend %font-twelve;
+	}
+
+	.services {
+		li {
+			height: 43px;
+			line-height: 43px;
+			padding: 0 6.6% 0 2%;
+			border-bottom: 1px solid #d7d7d7;
+			@extend %text-align;
+		}
+
+		.name {
+			color: #222;
+			@extend %float-left;
+			@extend %font-fourteen;
+		}
+
+		.purchase-info {
+			@extend %relative;
+
+			&:before {
+				content: '';
+				top: 15px;
+				right: -23px;
+				width: 15px;
+				height: 15px;
+				background-color: #ff0013;
+				border-radius: 50%;
+				@extend %absolute;
+			}
+
+			&:after {
+				content: 'i';
+				top: 1px;
+				right: -17px;
+				font-size: 12px;
+				color: #fff;
+				@extend %absolute;
+			}
+		}
+
+		.loan {
+			color: #737373;
+			@extend %font-twelve;
+		}
+
+		.remark {
+			color: #222;
+			@extend %relative;
+			@extend %float-right;
+			@extend %font-fourteen;
+
+			&:after {
+				content: '';
+				top: 17px;
+				right: -14px;
+				width: 8px;
+				height: 8px;
+				border-top: 1px solid #222;
+				border-right: 1px solid #222;
+				@include transform(45);
+				@extend %absolute;
+
+			}
+		}
+	}
+
+	.warm-prompt {
+		line-height: 17px;
+		padding: 12px 2%;
+		color: #737373;
+		@extend %font-twelve;
+	}
+}
+
+.cd-rush-hintbox {
+	position: fixed;
+	right: 0;
+	left: 0;
+	width: 82%;
+	margin: auto;
+	background-color: #fff;
+	z-index: 30;
+	@extend %radiu;
+
+	.title {
+		padding: 12px 0;
+		color: #000;
+		@extend %font-fifteen;
+	}
+
+	.button {
+		text-align: right;
+
+		span {
+			display: inline-block;
+			padding: 12px;
+			@extend %font-fifteen;
+		}
+	}
+
+	.confirm-btn {
+		margin-right: -12px;
+		color: #c1282d;
+	}
+
+	.cancel-btn {
+		color: #8d8d8d;
+	}
+}
+
+.cd-rush-state {
+	top: 18%;
+	width: 82%;
+	padding: 10px 7.3% 6px;
+
+	@media screen and (max-width:320px) {
+		& {
+			top: 9%;
+		}
+	}
+
+	.items {
+		padding-bottom: 20px;
+
+		li {
+			line-height: 24px;
+			color: #666;
+			@extend %font-fourteen;
+
+			@media screen and (max-width:320px) {
+				& {
+					line-height: 22px;
+				}
+			}
+		}
+	}
+}
+
+.cd-rush-verification {
+	top: 0;
+	bottom: 0;
+	height: 168px;
+	padding: 10px 7.8% 6px;
+	font-size: 0;
+
+	input[type=text] {
+		width: 52.5%;
+		padding-left: 14px;
+		border: 1px solid #d7d7d7;
+		@extend %font-fourteen;
+		@extend %radiu;
+		@extend %apple-default;
+	}
+
+	.code {
+		display: inline-block;
+		width: 26%;
+		height: 35px;
+		line-height: 35px;
+		margin: 0 2%;
+		background-color: #f0f0f0;
+		text-decoration: line-through;
+		@extend %text-align;
+		@extend %font-fourteen;
+	}
+
+	input[type=button] {
+		width: 17.5%;
+		background-color: #fff;
+		color: #000;
+		text-decoration: underline;
+		@extend %text-align;
+		@extend %font-fourteen;
+		@extend %apple-default;
+	}
+
+	.button {
+		margin-top: 27px;
+	}
+}
+
+.cd-rush-success {
+	top: 0;
+	bottom: 0;
+	height: 168px;
+	padding: 10px 7.8% 6px;
+
+	.button {
+		margin-top: 45px;
+	}
+}
+
+.cd-bottom-tags {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	overflow: hidden;
+
+	li {
+		flex: none;
+		align-self: center;
+		height: 50px;
+		background-color: #fff;
+		border-top: 1px solid #d7d7d7;
+		@extend %text-align;
+		@extend %box-sizing;
+		@extend %font-twelve;
+	}
+
+	.contact-us {
+		width: 29%;
+		a {
+			padding-top: 29px;
+			color: #737373;
+			background: url(../images/neun-icon-cafbb7f5ba.png) no-repeat;
+			background-size: 34px 1700px;
+			background-position: 50% 0;
+			@extend %a-block;
+			@extend %relative;
+		}
+	}
+
+	.appointment {
+		width: 29%;
+
+		span {
+			display: block;
+			padding-top: 29px;
+			color: #737373;
+			@extend %relative;
+
+			&:before {
+				content: '';
+				top: 7px;
+				left: 50%;
+				width: 15px;
+				height: 15px;
+				margin-left: -8px;
+				border: 1px solid #737373;
+				border-radius: 50%;
+				@extend %absolute;
+			}
+
+			&:after {
+				content: '';
+				top: 11px;
+				left: 50%;
+				width: 3px;
+				height: 5px;
+				border-left: 1px solid #737373;
+				border-bottom: 1px solid #737373;
+				@extend %absolute;
+			}
+		}
+	}
+
+	.act-countDown {
+		width: 42%;
+		color: #fff;
+		@include normalGradient(linear, left, #d01235, #fe203c);
+		
+		.title {
+			margin-left: -64px;
+			padding-top: 8px;
+		}
+
+		.time {
+			margin-left: 5px;
+		}
+	}
+}
